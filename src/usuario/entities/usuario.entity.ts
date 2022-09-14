@@ -1,5 +1,6 @@
 import { IsNotEmpty, MaxLength } from "class-validator";
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Carrinho } from "src/carrinho/entities/carrinho.entity";
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('tb_usuarios')
 export class Usuario{
@@ -47,4 +48,8 @@ export class Usuario{
     @IsNotEmpty()
     @Column({nullable: false})
     favoritos: number
+
+    @OneToOne(() => Carrinho, (carrinho) => carrinho.usuario)
+    carrinho: Carrinho
+
 }
