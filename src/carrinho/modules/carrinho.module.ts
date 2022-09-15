@@ -1,3 +1,4 @@
+/*
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { CarrinhoController } from "../controllers/carrinho.controller";
@@ -11,3 +12,4 @@ import { CarrinhoService } from "../services/carrinho.service";
     exports: [TypeOrmModule]
 })
 export class CarrinhoModule{}
+*/

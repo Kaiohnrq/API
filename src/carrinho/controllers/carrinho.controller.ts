@@ -1,5 +1,5 @@
+/*
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post } from "@nestjs/common";
-import { DeleteResult } from "typeorm";
 import { Carrinho } from "../entities/carrinho.entity";
 import { CarrinhoService } from "../services/carrinho.service";
 
@@ -33,3 +33,4 @@ export class CarrinhoController{
     }
 
 }
+*/

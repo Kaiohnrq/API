@@ -1,3 +1,4 @@
+/*
 import { HttpException, HttpStatus, Injectable, Post } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { DeleteResult, Repository } from "typeorm";
@@ -38,3 +39,4 @@ export class CarrinhoService{
         return this.carrinhoRepository.delete(id)
     }
 }
+*/
