@@ -35,6 +35,13 @@ export class ProdutoService {
         })
     }
 
+    async findByDescricao(descricao: string): Promise<Produto[]> {
+        return this.produtoRepository.find({
+            where: { descricao: ILike(`%${descricao}%`) },
+            relations: { categoria: true }
+        })
+    }
+
     async findByCodigo(codigoProduto: number): Promise<Produto[]> {
         let codigo = await this.produtoRepository.find({
             where: { codigoProduto },

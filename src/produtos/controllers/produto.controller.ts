@@ -40,6 +40,12 @@ export class ProdutoController{
         return this.service.findByPreco(preco)
     }
 
+    @Get('/descricao/:descricao')
+    @HttpCode(HttpStatus.OK)
+    findByDescricao(@Param('descricao') descricao: string): Promise <Produto[]>{
+        return this.service.findByDescricao(descricao)
+    }
+
     @Post()
     @HttpCode(HttpStatus.CREATED)
     create(@Body() produto: Produto): Promise<Produto>{

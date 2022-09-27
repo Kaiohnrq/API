@@ -18,6 +18,12 @@ export class Produto{
     nome: string
 
     @IsNotEmpty()
+    @MaxLength(255)
+    @Column({nullable: false, length:255})
+    @ApiProperty()
+    descricao: string
+
+    @IsNotEmpty()
     @Column({nullable: false})
     @ApiProperty()
     codigoProduto: number
