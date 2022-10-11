@@ -10,7 +10,7 @@ import { UsuarioModule } from './usuario/modules/usuario.module';
 
 @Module({
   imports: [
-    /*
+    
     TypeOrmModule.forRoot({
     type: 'mysql',
     host: 'localhost',
@@ -21,7 +21,7 @@ import { UsuarioModule } from './usuario/modules/usuario.module';
     entities: [Produto, Categoria, Usuario],
     synchronize: true
     }),
-    */
+    /*
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
@@ -30,7 +30,7 @@ import { UsuarioModule } from './usuario/modules/usuario.module';
       ssl: { rejectUnauthorized: false },
       synchronize: true,
       autoLoadEntities: true
-    }),
+    }),*/
     ProdutoModule,
     CategoriaModule,
     UsuarioModule,

@@ -38,11 +38,6 @@ export class Usuario {
     email: string
 
     @IsNotEmpty()
-    @Column({ nullable: false })
-    @ApiProperty()
-    cep: number
-
-    @IsNotEmpty()
     @MaxLength(255)
     @Column({ nullable: false, length: 255 })
     @ApiProperty()
