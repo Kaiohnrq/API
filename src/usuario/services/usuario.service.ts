@@ -30,17 +30,6 @@ export class UsuarioService {
         })
     }
 
-    async findByCep(cep: number): Promise<Usuario[]> {
-        let usuario = await this.usuarioRepository.find({
-            where: { cep }
-        })
-
-        if (!usuario)
-            throw new HttpException('Usuário não encontrado!', HttpStatus.NOT_FOUND)
-        return usuario
-    }
-
-
     async findByCpf(cpf: number): Promise<Usuario> {
         let usuario = await this.usuarioRepository.findOne({
             where: { cpf }

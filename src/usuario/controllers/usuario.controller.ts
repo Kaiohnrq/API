@@ -26,12 +26,6 @@ export class UsuarioController {
         return this.service.findByNome(nome)
     }
 
-    @Get('/cep/:cep')
-    @HttpCode(HttpStatus.OK)
-    findByCep(@Param('cep', ParseIntPipe) cep: number): Promise<Usuario[]> {
-        return this.service.findByCep(cep)
-    }
-
     @Get('/cpf/:cpf')
     @HttpCode(HttpStatus.OK)
     findByCpf(@Param('cpf', ParseIntPipe) cpf: number): Promise<Usuario> {
