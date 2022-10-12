@@ -32,6 +32,18 @@ export class UsuarioController {
         return this.service.findByCpf(cpf)
     }
 
+    @Get('/email/:email')
+    @HttpCode(HttpStatus.OK)
+    findByEmail(@Param('email') email: string): Promise<Usuario[]> {
+        return this.service.findByEmail(email)
+    }
+
+    @Get('/senha/:senha')
+    @HttpCode(HttpStatus.OK)
+    findBySenha(@Param('senha') senha: string): Promise<Usuario[]> {
+        return this.service.findBySenha(senha)
+    }
+
     @Post()
     @HttpCode(HttpStatus.CREATED)
     create(@Body() usuario: Usuario): Promise<Usuario> {

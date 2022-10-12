@@ -30,6 +30,18 @@ export class UsuarioService {
         })
     }
 
+    async findByEmail(email: string): Promise<Usuario[]> {
+        return this.usuarioRepository.find({
+            where: {email: ILike(`%${email}%`)}
+        })
+    }
+
+    async findBySenha(senha: string): Promise<Usuario[]>{
+        return this.usuarioRepository.find({
+            where: {senha: ILike(`%${senha}%`)}
+        })
+    }
+
     async findByCpf(cpf: number): Promise<Usuario> {
         let usuario = await this.usuarioRepository.findOne({
             where: { cpf }
