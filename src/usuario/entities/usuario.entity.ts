@@ -15,6 +15,11 @@ export class Usuario {
     cpf: number
 
     @IsNotEmpty()
+    @Column({ nullable: false })
+    @ApiProperty()
+    telefone: number
+
+    @IsNotEmpty()
     @MaxLength(255)
     @Column({ nullable: false, length: 255 })
     @ApiProperty()
